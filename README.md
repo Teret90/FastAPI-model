@@ -21,7 +21,7 @@ Una empresa distribuidora nacional utiliza este microservicio para predecir las 
 - `/ingest`: Almacena nuevos registros de gastos en publicidad y ventas en la base de datos.
 - `/retrain`: Reentrena el modelo utilizando los datos almacenados en la base de datos.
 
-## Requisitos
+### Dependencias
 
 - Python 3.6 o superior
 - FastAPI
