@@ -16,6 +16,7 @@ async def home():
 
 @app.get('/predict')
 async def predict(data:dict):
+    ### podiamos haber hecho data=data.get('data',None) es como meterle lod corchetes pero si no hay data no se rompe el flujo y no da error  y ya podriamos poner un if None
     model = pickle.load(open('data/advertising_model.pkl','rb'))
 
     prediction = model.predict([[data['data'][0][0],data['data'][0][1],data['data'][0][2]]])
