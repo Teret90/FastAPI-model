@@ -16,7 +16,7 @@ async def home():
 
 @app.get('/predict')
 async def predict(data:dict):
-    model = pickle.load(open('../data/advertising_model.pkl','rb'))
+    model = pickle.load(open('data/advertising_model.pkl','rb'))
 
     prediction = model.predict([[data['data'][0][0],data['data'][0][1],data['data'][0][2]]])
 
@@ -33,7 +33,7 @@ async def ingest_data(data:dict):
     
 @app.post ('/retrain')
 async def retrain():
-    model = pickle.load(open('../data/advertising_model.pkl','rb'))
+    model = pickle.load(open('data/advertising_model.pkl','rb'))
     def sql_query(query):
 
         cursor.execute(query)
